@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NUMRUSH</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="bg-particles" id="particles"></div>
+
+  <header>
+    <h1 class="title">NUMRUSH</h1>
+    <p class="subtitle">Mental Math Arena • Train Your Brain</p>
+  </header>
+
+  <main class="game-grid">
+    <div class="game-card" data-game="addsub">
+      <div class="icon">➕➖</div>
+      <h2>Chain Reaction</h2>
+      <p>Consecutive add & subtract – no signs shown</p>
+    </div>
+
+    <div class="game-card" data-game="question">
+      <div class="icon">❓</div>
+      <h2>Missing Number</h2>
+      <p>Find the ? in every equation</p>
+    </div>
+
+    <div class="game-card" data-game="ops">
+      <div class="icon">⚡ +×÷</div>
+      <h2>Blitz Ops</h2>
+      <p>30-second operation sprint</p>
+    </div>
+
+    <div class="game-card" data-game="grid">
+      <div class="icon">1→25</div>
+      <h2>Number Sweep</h2>
+      <p>Ascending number hunt – beat the clock</p>
+    </div>
+
+    <div class="game-card" data-game="check">
+      <div class="icon">✔ ✖</div>
+      <h2>Flash Verdict</h2>
+      <p>True/False lightning round</p>
+    </div>
+
+    <div class="game-card" data-game="compare">
+      <div class="icon">&lt; &gt; =</div>
+      <h2>Inequality Clash</h2>
+      <p>Choose < > or = under pressure</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

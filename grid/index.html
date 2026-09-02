@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+
+    <title>
+        Number Sweep – NUMRUSH
+    </title>
+
+    <link rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+
+    <h1>
+        Number Sweep
+    </h1>
+
+    <p class="level">
+        Level
+        <span id="level">
+            1
+        </span>
+    </p>
+
+    <div id="instructions">
+
+        <p>
+            Click numbers in ascending order
+            (smallest to biggest).
+        </p>
+
+        <p>
+            Wrong click = lose one life.
+        </p>
+
+        <p>
+            Complete all numbers before
+            the timer ends.
+        </p>
+
+        <p>
+            Each number also has a small
+            individual time limit.
+        </p>
+
+        <button id="startBtn">
+            START GAME
+        </button>
+
+    </div>
+
+    <div id="game"
+        class="hidden">
+
+        <div id="grid"
+            class="grid"></div>
+
+        <div class="lives">
+            Lives:
+            <span id="lives">
+                ❤️❤️❤️
+            </span>
+        </div>
+
+        <div class="timer-label">
+            Level Time
+        </div>
+
+        <div class="timer-container">
+
+            <div id="timer-bar"
+                class="timer-bar"></div>
+
+        </div>
+
+    </div>
+
+    <div id="level-complete"
+        class="overlay hidden">
+
+        <div class="box success">
+
+            <h2>
+                LEVEL COMPLETE 🎉
+            </h2>
+
+            <p>
+                Great speed and accuracy!
+            </p>
+
+            <button id="next-btn">
+                NEXT LEVEL
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="game-over"
+        class="overlay hidden">
+
+        <div class="box gameover">
+
+            <h2>
+                GAME OVER
+            </h2>
+
+            <p id="gameover-msg">
+                Better luck next time.
+            </p>
+
+            <div class="gameover-buttons">
+
+                <button id="retry-btn">
+                    RETRY LEVEL
+                </button>
+
+                <button id="menu-btn">
+                    MAIN MENU
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="particles"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

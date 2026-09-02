@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at center,
+      #2b0040,
+      #000);
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #d27cff;
+  margin: 1.5rem 0 0.5rem;
+  font-size: clamp(2.3rem, 8vw, 4.2rem);
+  text-shadow:
+    0 0 20px rgba(210, 124, 255, 0.5);
+}
+
+.level {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #6cf;
+  font-weight: bold;
+}
+
+#instructions {
+  margin: 4rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+#instructions p {
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.95rem 2.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background:
+    linear-gradient(135deg,
+      #ff4fd8,
+      #ff0088);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow:
+    0 0 18px rgba(255, 79, 216, 0.35);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+  background:
+    linear-gradient(135deg,
+      #6cf,
+      #00aaff);
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  max-width: 430px;
+  margin: 2rem auto;
+}
+
+
+.cell {
+  background:
+    linear-gradient(145deg,
+      #ff4fd8,
+      #d600a6);
+
+  border-radius: 1rem;
+
+  padding: 2rem;
+
+  font-size: 2.4rem;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.5);
+
+  user-select: none;
+}
+
+.cell:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 0 25px rgba(108, 240, 255, 0.6);
+}
+
+
+.cell.clicked {
+  background:
+    linear-gradient(145deg,
+      #00d26a,
+      #0a9d50) !important;
+
+  color: white;
+
+  transform: scale(1.12);
+
+  box-shadow:
+    0 0 35px rgba(76, 175, 80, 0.8);
+
+  pointer-events: none;
+}
+
+
+.cell.wrong {
+  background:
+    linear-gradient(145deg,
+      #ff3d3d,
+      #c70000) !important;
+
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-6px);
+  }
+
+  75% {
+    transform: translateX(6px);
+  }
+}
+
+
+.lives {
+  font-size: 1.7rem;
+  margin-top: 1.2rem;
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+
+.timer-label {
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+
+.timer-container {
+  width: 80%;
+  max-width: 520px;
+  height: 14px;
+  margin: 0 auto;
+  background: #222;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.timer-bar {
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(90deg,
+      #00ff99,
+      #00cfff);
+
+  transition: width 0.08s linear;
+}
+
+
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.box {
+  background:
+    linear-gradient(145deg,
+      #2a0040,
+      #12001f);
+
+  padding: 2.5rem 3rem;
+
+  border-radius: 1.6rem;
+
+  text-align: center;
+
+  width: 90%;
+  max-width: 460px;
+
+  box-shadow:
+    0 0 40px rgba(108, 240, 255, 0.35);
+}
+
+
+.success {
+  border: 3px solid #00d26a;
+}
+
+.success h2 {
+  color: #00ff99;
+  margin-bottom: 1rem;
+}
+
+
+.gameover {
+  border: 3px solid #ff4444;
+}
+
+.gameover h2 {
+  color: #ff5555;
+  margin-bottom: 1rem;
+}
+
+#gameover-msg {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+
+.gameover-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+#particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle,
+      #fff,
+      #ff4fd8);
+
+  box-shadow:
+    0 0 12px #6cf;
+
+  animation:
+    explode 0.8s ease-out forwards;
+}
+
+@keyframes explode {
+
+  from {
+    transform:
+      translate(0, 0) scale(1);
+
+    opacity: 1;
+  }
+
+  to {
+    transform:
+      translate(var(--x), var(--y))
+      scale(0.2);
+
+    opacity: 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  #grid {
+    gap: 1rem;
+    max-width: 330px;
+  }
+
+  .cell {
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .box {
+    padding: 2rem 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .gameover-buttons {
+    flex-direction: column;
+  }
+}

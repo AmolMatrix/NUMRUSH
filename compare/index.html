@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Compare Clash</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-circle circle1"></div>
+    <div class="background-circle circle2"></div>
+
+    <section class="start-screen"
+        id="startScreen">
+
+        <div class="start-card">
+
+            <h1 class="title">
+                Compare Clash
+            </h1>
+
+            <p class="instructions">
+
+                • Select correct symbol:
+                &gt; , &lt; , = <br><br>
+
+                • Button positions change after every question.<br><br>
+
+                • Complete 10 questions to unlock next level.<br><br>
+
+                • Higher levels include roots and equations.<br><br>
+
+            </p>
+
+            <button id="playBtn"
+                class="play-btn">
+                PLAY GAME
+            </button>
+
+        </div>
+
+    </section>
+
+    <section class="game-area"
+        id="gameArea">
+        <div class="top-bar">
+
+            <div class="level-box">
+                LEVEL
+                <span id="levelText">1</span>
+            </div>
+
+            <div class="question-box">
+                Question
+                <span id="questionText">
+                    1 / 10
+                </span>
+            </div>
+        </div>
+
+        <div class="compare-card">
+
+            <div class="value"
+                id="leftSide">
+                12
+            </div>
+
+            <div class="middle-sign">
+                ?
+            </div>
+
+            <div class="value"
+                id="rightSide">
+                25
+            </div>
+
+        </div>
+        <div class="buttons-area"
+            id="buttonsArea">
+        </div>
+
+        <div class="timer-wrapper">
+
+            <div class="timer-bar"
+                id="timerBar"></div>
+        </div>
+
+        <div class="score-box">
+
+            Score :
+            <span id="scoreText">
+                0
+            </span>
+
+        </div>
+
+    </section>
+
+    <div class="popup"
+        id="gameOverPopup">
+
+        <div class="popup-card">
+
+            <h2 id="popupTitle">
+                Game Over
+            </h2>
+
+            <p id="popupMessage">
+                Wrong answer selected.
+            </p>
+
+            <div class="popup-buttons">
+
+                <button id="retryBtn"
+                    class="popup-btn">
+                    Retry
+                </button>
+
+                <button id="menuBtn"
+                    class="popup-btn menu-color">
+                    Menu
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="popup"
+        id="levelPopup">
+
+        <div class="popup-card">
+
+            <h2>
+                Level Complete 🎉
+            </h2>
+
+            <p>
+                Next level unlocked.
+            </p>
+
+            <button id="nextBtn"
+                class="popup-btn">
+                Next Level
+            </button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

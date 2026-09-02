@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Chain Reaction – NUMRUSH
+    </title>
+
+    <link rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
+
+    <div class="container">
+
+        <h1>
+            Chain Reaction
+        </h1>
+
+        <p class="level">
+            Level
+            <span id="level">
+                1
+            </span>
+        </p>
+
+
+        <div id="instructions"
+            class="card">
+
+            <h2 class="section-title">
+                How To Play
+            </h2>
+
+            <p>
+                • Numbers appear one by one.
+            </p>
+
+            <p>
+                • First number is positive.
+            </p>
+
+            <p>
+                • Then mentally add and subtract.
+            </p>
+
+            <p>
+                • Enter the final total before time ends.
+            </p>
+
+            <button id="startBtn">
+                START GAME
+            </button>
+
+        </div>
+
+
+        <div id="game"
+            class="hidden card">
+
+            <div id="number-display">
+                —
+            </div>
+
+            <div class="answer-area">
+
+                <input type="number"
+                    id="answer"
+                    placeholder="Enter total"
+                    disabled>
+
+                <button id="submit"
+                    disabled>
+                    Submit
+                </button>
+
+            </div>
+
+            <div class="timer-container">
+
+                <div id="timer"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="success"
+        class="overlay hidden">
+
+        <div class="popup-box">
+
+            <h2>
+                LEVEL CLEARED 🎉
+            </h2>
+
+            <p>
+                Great job! Ready for next level.
+            </p>
+
+            <div class="popup-buttons">
+
+                <button id="next-level-btn">
+                    NEXT LEVEL
+                </button>
+
+                <button id="success-menu-btn"
+                    class="menu-btn">
+                    MENU
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="wrong"
+        class="overlay hidden">
+
+        <div class="popup-box">
+
+            <h2>
+                Wrong Answer ❌
+            </h2>
+
+            <p id="correct-msg">
+
+                Correct total was
+                <span id="correct-total">
+                    ?
+                </span>
+
+            </p>
+
+            <div class="popup-buttons">
+
+                <button id="retry-btn">
+                    RETRY
+                </button>
+
+                <button id="menu-btn"
+                    class="menu-btn">
+                    MENU
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="particles"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

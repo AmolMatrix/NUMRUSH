@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Missing Number – NUMRUSH
+    </title>
+
+    <link rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
+
+    <div class="container">
+
+        <h1>
+            Missing Number
+        </h1>
+
+        <p class="level">
+            Level
+            <span id="level">
+                1
+            </span>
+        </p>
+
+
+        <div id="instructions"
+            class="card">
+
+            <h2 class="section-title">
+                How To Play
+            </h2>
+
+            <p>
+                • Find the missing number in each equation.
+            </p>
+
+            <p>
+                • Choose the correct answer from 4 options.
+            </p>
+
+            <p>
+                • Complete 10 questions to clear the level.
+            </p>
+
+            <p>
+                • Timer becomes faster in higher levels.
+            </p>
+
+            <button id="startBtn">
+                START GAME
+            </button>
+
+        </div>
+
+
+        <div id="game"
+            class="hidden card">
+
+            <div id="equation">
+                —
+            </div>
+
+            <p id="progress">
+                1 / 10
+            </p>
+
+            <div class="options">
+
+                <button class="option"></button>
+
+                <button class="option"></button>
+
+                <button class="option"></button>
+
+                <button class="option"></button>
+
+            </div>
+
+            <div class="timer-container">
+
+                <div id="timer"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="success"
+        class="overlay hidden">
+
+        <div class="popup-box success-box">
+
+            <h2>
+                LEVEL COMPLETE 🎉
+            </h2>
+
+            <p>
+                Amazing work! Next challenge unlocked.
+            </p>
+
+            <div class="popup-buttons">
+
+                <button id="next-level-btn">
+                    NEXT LEVEL
+                </button>
+
+                <button id="success-menu-btn"
+                    class="menu-btn">
+                    MENU
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="gameover"
+        class="overlay hidden">
+
+        <div class="popup-box gameover-box">
+
+            <h2>
+                GAME OVER
+            </h2>
+
+            <p id="gameover-msg">
+                Better luck next time.
+            </p>
+
+            <div class="popup-buttons">
+
+                <button id="retry-btn">
+                    RETRY LEVEL
+                </button>
+
+                <button id="exit-btn"
+                    class="menu-btn">
+                    MENU
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="particles"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

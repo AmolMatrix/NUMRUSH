@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blitz Ops – NUMRUSH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Blitz Ops</h1>
+  <p class="level-info">Level <span id="level">1</span> • Goal: <span id="goal">5</span></p>
+
+  <div id="instructions">
+    <p>Solve as many equations as possible in 30 seconds!</p>
+    <p>Reach the goal to complete the level.</p>
+    <button id="startBtn">START BLITZ</button>
+  </div>
+
+  <div id="game" class="hidden">
+    <div class="timer-container">
+      <div id="timer-bar" class="timer-bar"></div>
+    </div>
+
+    <div id="equation" class="equation">8 + 3 = ?</div>
+    
+    <div class="score-container">
+      <p>Score: <span id="score">0</span></p>
+      <p>Combo: <span id="combo">x1</span></p>
+    </div>
+
+    <div class="options">
+      <button class="option"></button>
+      <button class="option"></button>
+      <button class="option"></button>
+      <button class="option"></button>
+    </div>
+  </div>
+
+  <div id="gameover" class="overlay hidden">
+    <div class="box">
+      <h2>GAME OVER</h2>
+      <p>Final Score: <span id="final-score">0</span></p>
+      <p id="result-text">You needed 5 correct</p>
+      <button id="retry-btn">RETRY LEVEL</button>
+      <button id="menu-btn">MAIN MENU</button>
+    </div>
+  </div>
+
+  <div id="level-complete" class="overlay hidden">
+    <div class="box success-box">
+      <h2>LEVEL COMPLETE!</h2>
+      <p>Final Score: <span id="complete-score">0</span></p>
+      <button onclick="nextLevel()">NEXT LEVEL</button>
+    </div>
+  </div>
+
+  <div id="particles"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
